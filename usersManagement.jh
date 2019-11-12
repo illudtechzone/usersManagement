@@ -1,0 +1,67 @@
+entity Customer {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+}
+
+entity Driver{
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+
+}
+
+entity DriverDocument
+{
+documentType String,
+document Blob,
+uploadTime Instant,
+validataionStartDate LocalDate,
+expiryDate LocalDate,
+isExpired Boolean
+}
+
+
+entity Vehicle
+{
+registerNo String,
+currentLocationGeopoint String,
+occupied Boolean
+}
+
+entity VehicleDocument{
+documentType String,
+document Blob,
+uploadTime Instant,
+validataionStartDate LocalDate,
+expiryDate LocalDate,
+isExpired Boolean
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+
+    Vehicle{document} to VehicleDocument
+    Driver{document} to DriverDocument
+
+}
+
+relationship ManyToOne{
+
+Vehicle{drivers} to Driver
+} 
+
+// Set pagination options
+paginate * with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

@@ -1,0 +1,34 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.illudtechzone.usersmanagement"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "microservice",
+    "baseName": "usersManagement",
+    "packageName": "com.illudtechzone.usersmanagement",
+    "packageFolder": "com/illudtechzone/usersmanagement",
+    "serverPort": "8092",
+    "authenticationType": "oauth2",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTI3OGU2ZGNlZDViZGIzODJmYjg1Zjc5ZWJmMmM2M2IxNDc1NWY4YmU0YWM0MDRkOTI4MTM5YWE5MWMxMmRmYWM1ODMzMTRjYmE3YWNlNWUyNjhmMTM3MWUxYzdhMTcwMjhiYWI0YWQxMzhkYmI3NDE1MTIxODAzMTBhNGZmZmY=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
