@@ -1,0 +1,42 @@
+{
+    "name": "Vehicle",
+    "fields": [
+        {
+            "fieldName": "registerNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "currentLocationGeopoint",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "occupied",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "vehicleDocument",
+            "otherEntityRelationshipName": "vehicle",
+            "relationshipName": "document"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "driver",
+            "otherEntityRelationshipName": "vehicle",
+            "relationshipName": "drivers",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191112080422",
+    "entityTableName": "vehicle",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "usersManagement",
+    "applications": "*",
+    "microserviceName": "usersManagement"
+}

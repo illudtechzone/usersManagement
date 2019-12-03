@@ -1,15 +1,22 @@
 entity Customer {
+customerIdpCode String,
 	firstName String,
 	lastName String,
 	email String,
 	phoneNumber String,
+	
 }
 
 entity Driver{
+	driverIdpCode String,
 	firstName String,
 	lastName String,
 	email String,
 	phoneNumber String,
+	location String,
+	image ImageBlob,
+    totalRating Double,	
+    status Boolean,
 
 }
 
@@ -54,14 +61,6 @@ relationship ManyToOne{
 Vehicle{drivers} to Driver
 } 
 
-// Set pagination options
-paginate * with pagination
-
-// Use Data Transfert Objects (DTO)
-// dto * with mapstruct
-
-// Set service options to all except few
 service all with serviceImpl
-
-// Set an angular suffix
-// angularSuffix * with mySuffix
+dto all with mapstruct
+paginate all with pagination

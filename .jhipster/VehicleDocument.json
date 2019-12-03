@@ -1,0 +1,48 @@
+{
+    "name": "VehicleDocument",
+    "fields": [
+        {
+            "fieldName": "documentType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "document",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "uploadTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "validataionStartDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "expiryDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "isExpired",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191112080423",
+    "entityTableName": "vehicle_document",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "usersManagement",
+    "applications": "*",
+    "microserviceName": "usersManagement"
+}

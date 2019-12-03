@@ -129,10 +129,13 @@ spring:
 security:
     oauth2:
         client:
-            client-id: internal
-            client-secret: internal
+            access-token-uri: http://dev.servers.divisosofttech.com:8888/auth/realms/PikkaDrivo/protocol/openid-connect/token
+            user-authorization-uri: http://dev.servers.divisosofttech.com:8888/auth/realms/PikkaDrivo/protocol/openid-connect/auth
+            client-id: account
+            client-secret: 3a251da1-13e8-4f65-a656-6033b9250d2b
+            scope: openid profile email
         resource:
-            user-info-uri: http://localhost:9080/auth/realms/jhipster/protocol/openid-connect/userinfo
+            user-info-uri: http://dev.servers.divisosofttech.com:8888/auth/realms/PikkaDrivo/protocol/openid-connect/userinfo
 
 server:
     servlet:
